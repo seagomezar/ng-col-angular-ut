@@ -1,2 +1,4 @@
 1. ng generate service [name] will create a names service and also will add the specs file.
 Let's explore how how and empty test is generated and inyected.
+
+2. Now let's create a private property to store a set of names, also we should add a method to return this names. It was easy right?, let's review how we can test this method. We need to think about how we can test the private property. Our instinct is to think about why is necesary to put name privates and why not just simply put default accessor or public instead. However there are a Javascript trick (only javascript), by accesing the property in this way servive['privateProperty']. So, now, we know it is important be aware about public and private properties and methods have a different strategy. Let's review then how the test is implemented.

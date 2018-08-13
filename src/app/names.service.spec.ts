@@ -12,4 +12,8 @@ describe('NamesService', () => {
     expect(service).toBeTruthy(); // We hope the service has been inyected and defined
   }));
 
+  it('should return all names', inject([NamesService], (service: NamesService) => {
+    expect(service.getNames().length).toBe(service["names"].length);
+  }));
+
 });
