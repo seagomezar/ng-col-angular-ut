@@ -6,3 +6,5 @@ Let's explore how how and empty test is generated and inyected.
 3. Let's explore another way to inject the service and see how it should work, as you may see during the "it" definition we are inyecting manually the service in each test which is great. i.e: `inject([NamesService], (service: NamesService)` however I always try to follow the rule DON'T REPEAT YOURSELF for that reason during the "beforeEach" method we can extract the service to test and put available. Less code and same functionality.
 
 4. Let's start with our first exercise, the idea is to gain muscle and write as many tests as we can, later, we will introduce TDD, but for now let's imagine we have a function which returns us the first element on our names array.
+
+5. The solution looks pretty obvious we should call the method and see if the returned name is the same than our `service['names'][0]`.

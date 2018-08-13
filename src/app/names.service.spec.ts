@@ -23,7 +23,9 @@ describe('NamesService', () => {
 
   it('should return the first name of the list of names', ()=>{
     /* hint: it should be similar to the all names test, think carefully about 
-     * what do you want to test?*/
+     * what do you want to test?
+     */
+    expect(service.getFirstName()).toBe(service['names'][0]);
   });
   
 
