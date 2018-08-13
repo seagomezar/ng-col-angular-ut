@@ -8,3 +8,5 @@ Let's explore how how and empty test is generated and inyected.
 4. Let's start with our first exercise, the idea is to gain muscle and write as many tests as we can, later, we will introduce TDD, but for now let's imagine we have a function which returns us the first element on our names array.
 
 5. The solution looks pretty obvious we should call the method and see if the returned name is the same than our `service['names'][0]`.
+
+6. Now we have a better understanding about the testing, the test just we wrote is helping us to understand the unit testing logic behind the scenes. Right now, probably you want to see what happens if our method is just a promise instead of a simple syncronous call? Now we rewrite the getNames method in a new method getNamesInPromise just to learn the logic about to return a promise instead of a simple call.

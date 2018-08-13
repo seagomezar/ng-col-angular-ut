@@ -9,12 +9,21 @@ export class NamesService {
 
   constructor() { }
 
-  public getNames() {
+  public getNames(): string[] {
     return this.names;
   }
 
+  public getNamesInPromise(): Promise<string[]> {
+    const myPromise: Promise<string[]> = new Promise( (resolve, reject) => {
+      setTimeout(() => {
+        resolve(this.names);
+      }, 2000);
+    });
+    return myPromise;
+  }
+
   // names.service.ts line 16
-  public getFirstName(){
+  public getFirstName(): string {
     return this.names[0];
   }
 }

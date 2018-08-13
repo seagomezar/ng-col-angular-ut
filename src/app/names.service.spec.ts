@@ -27,6 +27,12 @@ describe('NamesService', () => {
      */
     expect(service.getFirstName()).toBe(service['names'][0]);
   });
+
+  it('Should we get all elements in promise', () => {
+      service.getNamesInPromise().then(names => {
+        expect(names.length).toBe(service['names'].length);
+      });
+  });
   
 
 });
