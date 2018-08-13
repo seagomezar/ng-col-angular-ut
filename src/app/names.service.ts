@@ -13,13 +13,19 @@ export class NamesService {
     return this.names;
   }
 
-  public getNamesInPromise(): Promise<string[]> {
+  public getNamesInPromise(shouldFail: boolean = false): Promise<string[]> {
+
     const myPromise: Promise<string[]> = new Promise( (resolve, reject) => {
-      setTimeout(() => {
-        resolve(this.names);
-      }, 2000);
+      if (shouldFail) {
+        reject('Promise is Failing');
+      } else {
+        setTimeout(() => {
+          resolve(this.names);
+        }, 2000);
+      }
     });
     return myPromise;
+  
   }
 
   // names.service.ts line 16

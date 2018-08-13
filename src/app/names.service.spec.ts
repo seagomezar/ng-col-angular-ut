@@ -33,6 +33,13 @@ describe('NamesService', () => {
         expect(names.length).toBe(service['names'].length);
       });
   });
+
+  it('Should not we get the elements in promise', () => {
+    /**
+     * in order to make the promise failing you need to call the function
+     * with true in the param. i.e: service.getNamesInPromise(true)
+     */
+  });
   
 
 });
