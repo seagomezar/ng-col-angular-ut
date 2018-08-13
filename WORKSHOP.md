@@ -12,3 +12,5 @@ Let's explore how how and empty test is generated and inyected.
 6. Now we have a better understanding about the testing, the test just we wrote is helping us to understand the unit testing logic behind the scenes. Right now, probably you want to see what happens if our method is just a promise instead of a simple syncronous call? Now we rewrite the getNames method in a new method getNamesInPromise just to learn the logic about to return a promise instead of a simple call.
 
 7. What about if the promise fail, right now there is not a way to fail the Promise but we can do somthing experimental by sending the params to the function in order to fail, now it is time to you for writing the test case for the promise when it is failing, review the empty test I have created for you and start adding how it should like.
+
+8. Again, the solution is pretty obvious but we are gaining muscle to afford more challenges, for now the key is you need to create a test case for the then and catch.

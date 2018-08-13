@@ -39,6 +39,9 @@ describe('NamesService', () => {
      * in order to make the promise failing you need to call the function
      * with true in the param. i.e: service.getNamesInPromise(true)
      */
+    service.getNamesInPromise(true).catch(reason => {
+      expect(reason).toBe('Promise is Failing');
+    });
   });
   
 
