@@ -12,4 +12,9 @@ export class NamesService {
   public getNames() {
     return this.names;
   }
+
+  // names.service.ts line 16
+  public getFirstName(){
+    return this.names[0];
+  }
 }
