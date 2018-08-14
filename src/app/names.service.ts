@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -28,8 +30,11 @@ export class NamesService {
   
   }
 
-  // names.service.ts line 16
   public getFirstName(): string {
     return this.names[0];
+  }
+
+  public getFirstNameInObservable(): Observable<string> {
+    return of(this.names[0]);
   }
 }

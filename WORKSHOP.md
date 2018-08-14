@@ -14,3 +14,5 @@ Let's explore how how and empty test is generated and inyected.
 7. What about if the promise fail, right now there is not a way to fail the Promise but we can do somthing experimental by sending the params to the function in order to fail, now it is time to you for writing the test case for the promise when it is failing, review the empty test I have created for you and start adding how it should like.
 
 8. Again, the solution is pretty obvious but we are gaining muscle to afford more challenges, for now the key is you need to create a test case for the then and catch.
+
+9. What about observables, you will find in many cases that services are intended to return observables instead of promise because all the wave about reactive programing so let's explore first how to convert a simple data into an observable and then how to tests the observable. You will find the testing strategy is pretty similar than the promises stuff we assert inside the subscription object.

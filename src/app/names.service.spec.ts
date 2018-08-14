@@ -43,6 +43,14 @@ describe('NamesService', () => {
       expect(reason).toBe('Promise is Failing');
     });
   });
+
+  it('Should get the first name in Observable way', () => {
+
+    service.getFirstNameInObservable().subscribe((name)=>{
+      expect(name).toBe(service['names'][0]);
+    });
+    
+  });
   
 
 });
