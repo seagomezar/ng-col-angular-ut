@@ -37,4 +37,15 @@ export class NamesService {
   public getFirstNameInObservable(): Observable<string> {
     return of(this.names[0]);
   }
+
+  private _randomName(): string {
+    return this.names[Math.floor(Math.random()*this.names.length)];
+  }
+
+  public greetingsRandomName(): string {
+    return 'Hi ' + this._randomName();
+  }
+
+
+
 }
