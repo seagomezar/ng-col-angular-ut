@@ -51,6 +51,24 @@ describe('NamesService', () => {
     });
     
   });
+
+  /* Minimalist option, never ever do this because you are 
+     testing two things instead of one */ 
+  it('Should gretting a random name', ()=> {
+    // AVOID
+    expect(service.greetingsRandomName()).toContain('Hi');
+  });
+
+  // First let's test the random name
+  it('Should return a random', () => {
+    expect(service['_randomName']().length).toBeGreaterThan(1);
+  });
+
+  // Then let's spy and mock the random and test it.
+  it('Should gretting a name', () => {
+    spyOn<any>(service, '_randomName').and.returnValue("Peter");
+    expect(service.greetingsRandomName()).toEqual('Hi Peter');
+  });
   
 
 });
