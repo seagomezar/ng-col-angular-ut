@@ -43,10 +43,10 @@ describe('Provider: Conferences Service', () => {
       .subscribe((response) => {
         expect(response.September[0].name).toBe('NG-COL');
       });
-    // HeroService should have made one request to GET heroes from expected URL
+    // Conference should have made one request to GET conferences from expected URL
     const req = httpTestingController.expectOne(conferencesService.conferencesURL);
     expect(req.request.method).toEqual('GET');
-    // Respond with the mock heroes
+    // Respond with the mock conferences
     req.flush(expectedConferences);
   });
 });

@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
  * the current implementation of https://github.com/typicode/jsonplaceholder#how-to
  */
 export interface Post {
+    id?: number,
     title: string,
     body: string,
     userId: number
@@ -27,6 +28,6 @@ export class PlaceholderService {
    */
   /** POST: add a new post to the database */
   addPost (post: Post): Observable<Post> {
-      /** here is your method */
+    return this.http.post<Post>(this.endpointURL + 'posts', post);
   }
 }
