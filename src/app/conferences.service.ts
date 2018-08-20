@@ -1,13 +1,13 @@
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 @Injectable()
 export class ConferencesService {
+  conferencesURL: string = 'https://webconf-api-2018.glitch.me/';
 
   constructor(
-    public http: Http
+    public http: HttpClient
   ) { }
   /**
    * Return all conferences
@@ -16,6 +16,6 @@ export class ConferencesService {
    * @memberof ConferencesService
    */
   getAllConferences(): Observable<any> {
-    return this.http.get('https://webconf-api-2018.glitch.me/').pipe(map(res => res.json()));
+    return this.http.get(this.conferencesURL);
   }
 }

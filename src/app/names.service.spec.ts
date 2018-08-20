@@ -1,4 +1,4 @@
-import { TestBed, inject } from '@angular/core/testing'; // We always need this
+import { TestBed } from '@angular/core/testing'; // We always need this
 import { NamesService } from './names.service'; // Our service to test
 
 let service: NamesService;
