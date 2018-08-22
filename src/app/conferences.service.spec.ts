@@ -50,7 +50,7 @@ describe('Provider: Conferences Service', () => {
     req.flush(expectedConferences);
   });
 
-  it('should be able to manage the error and conferences lenght should be 0', () => {
+  it('should be able to manage the error and conferences length should be 0', () => {
     conferencesService
       .getAllConferences()
       .subscribe((response) => {
