@@ -49,18 +49,7 @@ describe('Provider: Conferences Service', () => {
     req.flush(expectedConferences);
   });
 
-  it('should be able to manage the error and conferences lenght should be 0', () => {
-    /* You will be noticed this test is failing because retry
-     * operator is going to create more request and due to 
-     * httpTestingController.verify(); you need to handle every single
-     * request so what to do?
-     *
-     * TODO: REWRITE this test to works with the retry operator and 
-     * be sure respond the propertly number of times
-     * according to conferencesService.MAX_RETRY_ATTEMPS 
-     */
-
-     // Don't touch this, it is completely fine
+  it('should be able to manage the error and conferences length should be 0', () => {
     conferencesService
       .getAllConferences()
       .subscribe((response) => {
@@ -71,17 +60,32 @@ describe('Provider: Conferences Service', () => {
         console.log("ERROR", err);
         fail('Unwanted code branch');
       });
-    
-    // Here is the deal
-    const req = httpTestingController.expectOne(conferencesService.conferencesURL);
-    expect(req.request.method).toEqual('GET');
     const msg = 'deliberate 404 error';
-    req.flush(msg, {status: 404, statusText: 'Not Found'}) ;
+    let currentRequest;
+    // Conference should have made one request to GET conferences from expected URL
+    for (let i = 0; i <= conferencesService.MAX_RETRY_ATTEMPS; i++) {
+      currentRequest = httpTestingController.expectOne(conferencesService.conferencesURL);
+      currentRequest.flush(msg, { status: 404, statusText: 'Not Found' });
+    }
   });
 
   it('Should be able to get all the conferences in last attemp', () => {
-    /* This should be pretty similar to the last test with the difference
-     * in the last attemp we will resolve propertly the request
-     */
+    const expectedConferences: any = { September: [{ name: 'NG-COL' }] };
+    conferencesService
+      .getAllConferences()
+      .subscribe((response) => {
+        expect(response.September[0].name).toBe('NG-COL');
+      });
+    const msg = 'deliberate 404 error';
+    let currentRequest;
+    // Conference should have made one request to GET conferences from expected URL
+    for (let i = 0; i <= conferencesService.MAX_RETRY_ATTEMPS; i++) {
+      currentRequest = httpTestingController.expectOne(conferencesService.conferencesURL);
+      if (i == conferencesService.MAX_RETRY_ATTEMPS) {
+        currentRequest.flush(expectedConferences);
+      } else {
+        currentRequest.flush(msg, { status: 404, statusText: 'Not Found' });
+      }
+    }
   });
 });
