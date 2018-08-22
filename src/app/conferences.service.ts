@@ -5,6 +5,7 @@ import { retry, catchError } from 'rxjs/operators';
 
 @Injectable()
 export class ConferencesService {
+  MAX_RETRY_ATTEMPS: number = 2;
   conferencesURL: string = 'https://webconf-api-2018.glitch.me/';
 
   constructor(
@@ -18,6 +19,7 @@ export class ConferencesService {
    */
   getAllConferences(): Observable<any> {
     return this.http.get(this.conferencesURL).pipe(
+        retry(this.MAX_RETRY_ATTEMPS),
         catchError(err => {
           // Call your logger function to do anything
           console.log(`something very bad just happened ${err}`);

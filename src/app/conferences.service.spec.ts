@@ -50,23 +50,21 @@ describe('Provider: Conferences Service', () => {
     req.flush(expectedConferences);
   });
 
-  it('should be able to get All The conferences at the second time', () => {
-
-    const expectedConferences: any = { September: [{ name: 'NG-COL' }] };
+  it('should be able to manage the error and conferences lenght should be 0', () => {
     conferencesService
       .getAllConferences()
       .subscribe((response) => {
         expect(response.length).toBe(0);
       }, err => {
-        // You will noticed it never get called because we are returning observable
+        /* You will noticed it never get called because we are returning observable
+        in case of error */
         console.log("ERROR", err);
+        fail('Unwanted code branch');
       });
     // Conference should have made one request to GET conferences from expected URL
     const req = httpTestingController.expectOne(conferencesService.conferencesURL);
     expect(req.request.method).toEqual('GET');
     const msg = 'deliberate 404 error';
     req.flush(msg, {status: 404, statusText: 'Not Found'}) ;
-    
-
   });
 });
