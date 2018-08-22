@@ -36,7 +36,6 @@ describe('Provider: Conferences Service', () => {
   });
 
   it('should be able to get All The conferences at the first time', () => {
-
     const expectedConferences: any = { September: [{ name: 'NG-COL' }] };
     conferencesService
       .getAllConferences()
@@ -50,7 +49,18 @@ describe('Provider: Conferences Service', () => {
     req.flush(expectedConferences);
   });
 
-  it('should be able to manage the error and conferences length should be 0', () => {
+  it('should be able to manage the error and conferences lenght should be 0', () => {
+    /* You will be noticed this test is failing because retry
+     * operator is going to create more request and due to 
+     * httpTestingController.verify(); you need to handle every single
+     * request so what to do?
+     *
+     * TODO: REWRITE this test to works with the retry operator and 
+     * be sure respond the propertly number of times
+     * according to conferencesService.MAX_RETRY_ATTEMPS 
+     */
+
+     // Don't touch this, it is completely fine
     conferencesService
       .getAllConferences()
       .subscribe((response) => {
@@ -61,10 +71,17 @@ describe('Provider: Conferences Service', () => {
         console.log("ERROR", err);
         fail('Unwanted code branch');
       });
-    // Conference should have made one request to GET conferences from expected URL
+    
+    // Here is the deal
     const req = httpTestingController.expectOne(conferencesService.conferencesURL);
     expect(req.request.method).toEqual('GET');
     const msg = 'deliberate 404 error';
     req.flush(msg, {status: 404, statusText: 'Not Found'}) ;
+  });
+
+  it('Should be able to get all the conferences in last attemp', () => {
+    /* This should be pretty similar to the last test with the difference
+     * in the last attemp we will resolve propertly the request
+     */
   });
 });

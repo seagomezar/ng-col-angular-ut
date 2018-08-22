@@ -32,3 +32,5 @@ Let's explore how an empty test is generated and injected.
 16. What is interesting about this is the response contains a key value which is the id and it should be the key value here to test if everything is going ok or not. Nothing should be very different than the get endpoint except we are using the interface and we are asserting more data focused.(Solution 4)
 
 17. One of the advantages about the observables in angular is the hability to catch and manage the error in the request, the catchError operator which give us the hability to handle and manage our error in the proper way always returning in an observable way, let's explore strategies about how to test it and what to consider about.
+
+18. Retry operator is a powerful tool which gives us the ability to resubscribe to the observable if the HTTP request fails and it tries again, this kind of behavior is for us a challenge because we need to think how we are going to handle this through unit tests. In this exercise, you have the goal of rewrite the failing unit test and write a new one when the retry operator works in the last attempt. (Exercise 5).
