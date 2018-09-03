@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, ComponentFixtureAutoDetect } from '@angular/core/testing';
 
 import { LoginComponent } from './login.component';
 
@@ -8,7 +8,10 @@ describe('LoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [LoginComponent]
+      declarations: [LoginComponent],
+      providers: [
+        { provide: ComponentFixtureAutoDetect, useValue: true }
+      ]
     }).compileComponents();
   }));
 
@@ -23,13 +26,12 @@ describe('LoginComponent', () => {
 
   it('should read proper message in proper time', (done) => {
     const p = fixture.nativeElement.querySelector('p');
-    // Phase 1 empty string
-    expect(p.textContent).toBe(' ');
-    fixture.detectChanges();
+    /* Phase 1 empty string needs to be remove because since the detect changes is triggered every time
+     * we don't have control in the very first time.
+     * expect(p.textContent).toBe(' '); */
     // Phase 2 Loading something
     expect(p.textContent).toContain('Ey! We are loading something');
     setTimeout(() => {
-      fixture.detectChanges();
       // Phase 3 content loaded
       expect(p.textContent).toContain('Something has been loaded!');
       done();
