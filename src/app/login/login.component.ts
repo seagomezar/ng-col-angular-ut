@@ -29,7 +29,10 @@ export class LoginComponent implements OnInit {
   }
 
   areValidCredentials(credentials) {
-    // Here you need to put the logic, return true or false according to the rules.
+    if (credentials.email.indexOf("@") && credentials.password.length > 8) {
+      return true;
+    }
+    return false;
   }
 
   onSubmit() {
