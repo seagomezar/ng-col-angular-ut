@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   }
 
   areValidCredentials(credentials) {
-    if (credentials.email.indexOf("@") && credentials.password.length > 8) {
+    if (~credentials.email.indexOf("@") && credentials.password.length > 8) {
       return true;
     }
     return false;
