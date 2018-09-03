@@ -1,6 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule }   from '@angular/forms';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -8,6 +9,7 @@ describe('AppComponent', () => {
         AppComponent,
         LoginComponent // We should add this to fix the tests
       ],
+      imports: [FormsModule]
     }).compileComponents();
   }));
   it('should create the app', async(() => {

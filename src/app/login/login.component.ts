@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
+class Login {
+  email: string;
+  password: string;
+}
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,6 +12,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   loadingMessage;
+  model = new Login();
 
   constructor() {
     // Initialy I want to display the loading message.

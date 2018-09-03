@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ConferencesService } from './conferences.service';
 import { NamesService } from './names.service';
 import { LoginComponent } from './login/login.component';
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ ConferencesService, NamesService],
   bootstrap: [AppComponent]

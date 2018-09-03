@@ -1,3 +1,17 @@
-<p>
-  {{loadingMessage}}
-</p>
+<div class="container">
+  <h1>Login form</h1>
+  <p>{{loadingMessage}}</p>
+  <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" [(ngModel)]="model.email" id="email" name="email" required>
+      TODO: remove this: Email: {{model.email}}
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" [(ngModel)]="model.password" id="password" name="password" required>
+      TODO: remove this: Password: {{model.password}}
+    </div>
+    <button type="submit" class="btn btn-success">Login</button>
+  </form>
+</div>

@@ -42,3 +42,5 @@ Let's explore how an empty test is generated and injected.
 21. Now let's go to a very small and particular case in wich we have a component who bind two times a variable to be rendered in the template we will use the setTimeout to introduce the done function in Javascript the important part is the fixture element who allows to execute the databinding process where available.
 
 22. Now we understand how to handle the change detection it is complete healthy try to avoid the fixture.detectChanges when possible, because we really don't want to be aware all the time if we need to run the detectChanges statement. Angular provides us the way to handle this process very easy through "ComponentFixtureAutoDetect", let's take a look the considerations and limitations about.
+
+23. Good, it is time to build something useful for you, let's build a full login to understand a little bit more complex concepts about the components testing, let's add a little login form in our component using bootstrap and importing the forms module. Nothing to be tested needs to be added in this step but it is important to ensure the tests are working. 
