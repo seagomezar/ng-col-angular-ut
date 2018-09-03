@@ -3,7 +3,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule }   from '@angular/forms';
 describe('AppComponent', () => {
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
@@ -11,21 +11,21 @@ describe('AppComponent', () => {
       ],
       imports: [FormsModule]
     }).compileComponents();
-  }));
-  it('should create the app', async(() => {
+  });
+  it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  }));
-  it(`should have as title 'ng-col-workshop'`, async(() => {
+  });
+  it(`should have as title 'ng-col-workshop'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('ng-col-workshop');
-  }));
-  it('should render title in a h1 tag', async(() => {
+  });
+  it('should render title in a h1 tag', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to ng-col-workshop!');
-  }));
+  });
 });

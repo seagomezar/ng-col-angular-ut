@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed, ComponentFixtureAutoDetect } from '@angular/core/testing';
 
-import { LoginComponent } from './login.component';
+import { LoginComponent, UserCredentials } from './login.component';
 import { FormsModule } from '@angular/forms';
 
 describe('LoginComponent', () => {
@@ -38,6 +38,16 @@ describe('LoginComponent', () => {
       expect(p.textContent).toContain('Something has been loaded!');
       done();
     }, 2000);
+  });
+
+  it('should return true if the credentials are valid', ()=> {
+    const credentials: UserCredentials = { email: 'valid@email.com', password: 'valid8digitsPassword'};
+    expect(component.areValidCredentials(credentials)).toBe(true);
+  });
+
+  it('should return true if the credentials are valid', ()=> {
+    const credentials: UserCredentials = { email: 'invalidemailcom', password: 'invalid'};
+    expect(component.areValidCredentials(credentials)).toBe(false);
   });
 
 });
