@@ -12,6 +12,6 @@ Let's review:
 
 1. [names.service.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step6/src/app/names.service.spec.ts) 
 
-2.[names.service.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step6/src/app/names.service.ts)
+2. [names.service.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step6/src/app/names.service.ts)
 
 ## You are done, now go to [Branch #7](https://github.com/seagomezar/ng-col-angular-ut/tree/step7)
