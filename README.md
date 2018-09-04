@@ -1,27 +1,14 @@
-# NgColWorkshop
+# Write powerful Unit Tests with Angular Test Bed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+# 3. Exploring other way
 
-## Development server
+Let's explore another way to inject the service and see how it should work.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+As you may see during the "it" definition we are injecting manually the service in each test which is great. i.e: inject([NamesService], (service: NamesService).
 
-## Code scaffolding
+✋ However, I always try to follow the rule DON'T REPEAT YOURSELF for that reason during the "beforeEach" method we can extract the service to test and put available. Let's see:
+[names.service.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step2/src/app/names.service.spec.ts)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+🎉 Less code and same functionality. 🎉
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## You are done, now go to [Branch #4](https://github.com/seagomezar/ng-col-angular-ut/tree/step4)
