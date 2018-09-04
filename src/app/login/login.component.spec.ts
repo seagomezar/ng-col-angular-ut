@@ -97,4 +97,26 @@ describe("LoginComponent", () => {
     expect(component.loadingMessage).toBe("Invalid credentials");
   });
 
+  it("should be returned user does not exist from service", () => {
+    const model = {
+      email: "noexistent@user.com",
+      password: "validpassword"
+    };
+    const authenticationService = fixture.debugElement.injector.get(
+      AuthenticationService
+    );
+    spyOn(authenticationService, "tryLogin").and.returnValue(
+      throwError("User does not exist")
+    );
+    spyOn(component, "areValidCredentials").and.returnValue(true);
+    const hostElement = fixture.nativeElement;
+    const button: HTMLElement = hostElement.querySelector("button");
+    component.model.email = model.email;
+    component.model.password = model.password;
+    button.click();
+    expect(component.areValidCredentials).toHaveBeenCalledWith(model);
+    fixture.detectChanges();
+    expect(component.loadingMessage).toBe("User does not exist");
+  });
+
 });
