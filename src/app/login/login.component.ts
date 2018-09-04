@@ -14,7 +14,7 @@ export class UserCredentials {
 export class LoginComponent implements OnInit {
   loadingMessage;
   model = new UserCredentials();
-  isLogged: boolean;
+  isLogged: boolean = false;
   _subscription$: any;
 
   constructor(public authenticationService: AuthenticationService) {

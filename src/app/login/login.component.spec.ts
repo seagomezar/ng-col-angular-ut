@@ -27,6 +27,7 @@ describe("LoginComponent", () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
+    fixture.detectChanges();
   });
 
   it("should create", () => {
@@ -118,5 +119,14 @@ describe("LoginComponent", () => {
     fixture.detectChanges();
     expect(component.loadingMessage).toBe("User does not exist");
   });
+
+  it("should be show the login if user is not logged in", () => {
+    // TODO: Write the test for the ngIf==false in the template.
+  });
+
+  it("should be show the private section if user is logged in", () => {
+    // TODO: Write the test for the ngIf==true in the template.
+  });
+  
 
 });
