@@ -1,6 +1,6 @@
-#Write powerful Unit Tests with Angular Test Bed
+# Write powerful Unit Tests with Angular Test Bed
 
-#1. Exploring the schematics for the default tests
+# 1. Exploring the schematics for the default tests
 
 Your application is running and working. Good 👌, now it's time to start exploring how Angular is doing the best effort making us confotable to write the unit tests.
 
