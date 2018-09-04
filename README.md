@@ -1,27 +1,29 @@
-# NgColWorkshop
+# Write powerful Unit Tests with Angular Test Bed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+# 2. Testing simple get functions and private properties
 
-## Development server
+Now,
+1. Let's create a private property to store a set of names in our [names.service.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step2/src/app/names.service.spec.ts):
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+    `private names: string[] = ['Juan', 'Mati'];`
 
-## Code scaffolding
+2. Also we should add a method to return this names. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    ` public getNames() {`
+        `return this.names;`
+    `}`
 
-## Build
+It was easy right? 🎉🎉🎉🤗🤗🤗, Let's review how we can test this method. We need to think about how we can test the private property 🧐. Our instinct is to think about why is necesary to put name privates and why not just simply put default accessor or public instead. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+However there are a Javascript trick (only javascript 👌), by accesing the property in this way service['privateProperty']. 
 
-## Running unit tests
+So, now, we know it is important be aware about public and private properties and methods have a different strategy. Let's review then how the test is implemented in  [names.service.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step2/src/app/names.service.spec.ts) 🧐
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+There are two key concepts here ✌️:
 
-## Running end-to-end tests
+1. Inyecting the service in the it method.
+2. The expect options for assert
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## You are done, now go to [Branch #3](https://github.com/seagomezar/ng-col-angular-ut/tree/step3)
