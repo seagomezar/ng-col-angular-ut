@@ -3,7 +3,7 @@
 # 2. Testing simple get functions and private properties
 
 Now,
-1. Let's create a private property to store a set of names in our [names.service.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step2/src/app/names.service.spec.ts):
+1. Let's create a private property to store a set of names in our [names.service.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step2/src/app/names.service.ts):
 
     `private names: string[] = ['Juan', 'Mati'];`
 
