@@ -50,6 +50,19 @@ export class LoginComponent implements OnInit {
     } else {
       this.loadingMessage = 'Logging in...';
       // here we will handle the request to the authentication service
+      this._subscription$ = this.authenticationService
+        .tryLogin(credentials)
+        .subscribe(
+          (response: any) => {
+            this.loadingMessage = "congratulations, you are now logged in";
+            this.isLogged = true;
+            // Everything was ok
+          },
+          (error: any) => {
+            this.loadingMessage = error;
+            this.isLogged = false;
+          }
+        );
     }
   }
 }

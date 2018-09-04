@@ -1,33 +1,26 @@
-import {
-  async,
-  ComponentFixture,
-  TestBed,
-  ComponentFixtureAutoDetect,
-  fakeAsync
-} from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
 import { LoginComponent, UserCredentials } from "./login.component";
 import { FormsModule } from "@angular/forms";
-
-export function newEvent(
-  eventName: string,
-  bubbles = false,
-  cancelable = false
-) {
-  let evt = document.createEvent("CustomEvent"); // MUST be 'CustomEvent'
-  evt.initCustomEvent(eventName, bubbles, cancelable, null);
-  return evt;
-}
+import { AuthenticationService } from "../authentication.service";
+import { of, Observable, throwError } from "rxjs";
 
 describe("LoginComponent", () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
+  let AuthenticationServiceMock: Partial<AuthenticationService> = {
+    tryLogin: credentials => {
+      return of("OK");
+    }
+  };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [LoginComponent],
       imports: [FormsModule],
-      providers: [{ provide: ComponentFixtureAutoDetect, useValue: true }]
+      providers: [
+        { provide: AuthenticationService, useValue: AuthenticationServiceMock }
+      ]
     }).compileComponents();
   }));
 
@@ -46,9 +39,11 @@ describe("LoginComponent", () => {
      * we don't have control in the very first time.
      * expect(p.textContent).toBe(' '); */
     // Phase 2 Loading something
+    fixture.detectChanges();
     expect(p.textContent).toContain("Ey! We are loading something");
     setTimeout(() => {
       // Phase 3 content loaded
+      fixture.detectChanges();
       expect(p.textContent).toContain("Something has been loaded!");
       done();
     }, 2000);
@@ -82,7 +77,9 @@ describe("LoginComponent", () => {
     component.model.password = model.password;
     button.click();
     expect(component.areValidCredentials).toHaveBeenCalledWith(model);
-    expect(component.loadingMessage).toBe('Logging in...');
+    expect(component.loadingMessage).toBe(
+      "congratulations, you are now logged in"
+    );
   });
 
   it("should be called areValidCredentials from the view and login message is failed", () => {
@@ -97,6 +94,7 @@ describe("LoginComponent", () => {
     component.model.password = model.password;
     button.click();
     expect(component.areValidCredentials).toHaveBeenCalledWith(model);
-    expect(component.loadingMessage).toBe('Invalid credentials');
+    expect(component.loadingMessage).toBe("Invalid credentials");
   });
+
 });
