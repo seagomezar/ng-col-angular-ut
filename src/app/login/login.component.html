@@ -4,12 +4,12 @@
   <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" class="form-control" [(ngModel)]="model.email" id="email" name="email" required>
+      <input type="email" class="form-control" [(ngModel)]="model.email" id="email" name="email" value="" required>
       TODO: remove this: Email: {{model.email}}
     </div>
     <div class="form-group">
       <label for="password">Password</label>
-      <input type="password" class="form-control" [(ngModel)]="model.password" id="password" name="password" required>
+      <input type="password" class="form-control" [(ngModel)]="model.password" id="password" name="password" value="" required>
       TODO: remove this: Password: {{model.password}}
     </div>
     <button type="submit" class="btn btn-success">Login</button>

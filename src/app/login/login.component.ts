@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { AuthenticationService } from "../authentication.service";
 
 export class UserCredentials {
   email: string;
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
   isLogged: boolean;
   _subscription$: any;
 
-  constructor() {
+  constructor(public authenticationService: AuthenticationService) {
     // Initialy I want to display the loading message.
     this.loadingMessage = "Ey! We are loading something";
   }
@@ -29,13 +30,26 @@ export class LoginComponent implements OnInit {
   }
 
   areValidCredentials(credentials) {
-    if (~credentials.email.indexOf("@") && credentials.password.length > 8) {
+    if (
+      credentials.email &&
+      ~credentials.email.indexOf("@") &&
+      credentials.password.length > 8
+    ) {
       return true;
     }
     return false;
   }
 
   onSubmit() {
-    // We will take care of this later
+    const credentials: UserCredentials = {
+      email: this.model.email,
+      password: this.model.password
+    };
+    if (!this.areValidCredentials(credentials)) {
+      this.loadingMessage = 'Invalid credentials';
+    } else {
+      this.loadingMessage = 'Logging in...';
+      // here we will handle the request to the authentication service
+    }
   }
 }

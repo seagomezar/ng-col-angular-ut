@@ -1,9 +1,25 @@
-import { async, ComponentFixture, TestBed, ComponentFixtureAutoDetect } from '@angular/core/testing';
+import {
+  async,
+  ComponentFixture,
+  TestBed,
+  ComponentFixtureAutoDetect,
+  fakeAsync
+} from "@angular/core/testing";
 
-import { LoginComponent, UserCredentials } from './login.component';
-import { FormsModule } from '@angular/forms';
+import { LoginComponent, UserCredentials } from "./login.component";
+import { FormsModule } from "@angular/forms";
 
-describe('LoginComponent', () => {
+export function newEvent(
+  eventName: string,
+  bubbles = false,
+  cancelable = false
+) {
+  let evt = document.createEvent("CustomEvent"); // MUST be 'CustomEvent'
+  evt.initCustomEvent(eventName, bubbles, cancelable, null);
+  return evt;
+}
+
+describe("LoginComponent", () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
 
@@ -11,9 +27,7 @@ describe('LoginComponent', () => {
     TestBed.configureTestingModule({
       declarations: [LoginComponent],
       imports: [FormsModule],
-      providers: [
-        { provide: ComponentFixtureAutoDetect, useValue: true }
-      ]
+      providers: [{ provide: ComponentFixtureAutoDetect, useValue: true }]
     }).compileComponents();
   }));
 
@@ -22,32 +36,67 @@ describe('LoginComponent', () => {
     component = fixture.componentInstance;
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 
-  it('should read proper message in proper time', (done) => {
-    const p = fixture.nativeElement.querySelector('p');
+  it("should read proper message in proper time", done => {
+    const p = fixture.nativeElement.querySelector("p");
     /* Phase 1 empty string needs to be remove because since the detect changes is triggered every time
      * we don't have control in the very first time.
      * expect(p.textContent).toBe(' '); */
     // Phase 2 Loading something
-    expect(p.textContent).toContain('Ey! We are loading something');
+    expect(p.textContent).toContain("Ey! We are loading something");
     setTimeout(() => {
       // Phase 3 content loaded
-      expect(p.textContent).toContain('Something has been loaded!');
+      expect(p.textContent).toContain("Something has been loaded!");
       done();
     }, 2000);
   });
 
-  it('should return true if the credentials are valid', ()=> {
-    const credentials: UserCredentials = { email: 'valid@email.com', password: 'valid8digitsPassword'};
+  it("should return true if the credentials are valid", () => {
+    const credentials: UserCredentials = {
+      email: "valid@email.com",
+      password: "valid8digitsPassword"
+    };
     expect(component.areValidCredentials(credentials)).toBe(true);
   });
 
-  it('should return true if the credentials are valid', ()=> {
-    const credentials: UserCredentials = { email: 'invalidemailcom', password: 'invalid'};
+  it("should return true if the credentials are valid", () => {
+    const credentials: UserCredentials = {
+      email: "invalidemailcom",
+      password: "invalid"
+    };
     expect(component.areValidCredentials(credentials)).toBe(false);
   });
 
+  it("should be called areValidCredentials from the view and login message is ok", () => {
+    const model = {
+      email: "valid@email.com",
+      password: "valid8digitsPassword"
+    };
+    spyOn(component, "areValidCredentials").and.returnValue(true);
+    const hostElement = fixture.nativeElement;
+    const button: HTMLElement = hostElement.querySelector("button");
+    component.model.email = model.email;
+    component.model.password = model.password;
+    button.click();
+    expect(component.areValidCredentials).toHaveBeenCalledWith(model);
+    expect(component.loadingMessage).toBe('Logging in...');
+  });
+
+  it("should be called areValidCredentials from the view and login message is failed", () => {
+    const model = {
+      email: "invalid",
+      password: "invalid"
+    };
+    spyOn(component, "areValidCredentials").and.returnValue(false);
+    const hostElement = fixture.nativeElement;
+    const button: HTMLElement = hostElement.querySelector("button");
+    component.model.email = model.email;
+    component.model.password = model.password;
+    button.click();
+    expect(component.areValidCredentials).toHaveBeenCalledWith(model);
+    expect(component.loadingMessage).toBe('Invalid credentials');
+  });
 });
