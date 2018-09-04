@@ -8,6 +8,10 @@ Right now probably you want to see what happens if our method is just a promise 
 
 Now we rewrite the getNames method in a new method getNamesInPromise just to learn the logic about to return a promise instead of a simple call. 👩‍🍳
 
-Let's review the (names.service.spec.ts)[https://github.com/seagomezar/ng-col-angular-ut/blob/step6/src/app/names.service.spec.ts] and the (names.service.ts)[https://github.com/seagomezar/ng-col-angular-ut/blob/step6/src/app/names.service.ts]
+Let's review:
+
+1. [names.service.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step6/src/app/names.service.spec.ts) 
+
+2.[names.service.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step6/src/app/names.service.ts)
 
 ## You are done, now go to [Branch #7](https://github.com/seagomezar/ng-col-angular-ut/tree/step7)
