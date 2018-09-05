@@ -2,7 +2,7 @@
 
 # 11.  Solution testing dependent functions 🤩
 
-Showing how to test dependent functions. The first temptation is trying to simply call the greetings random function and review whats happening if we invoke this function. 
+The first temptation is trying to simply call the greetings random function and review whats happening if we invoke this function. 
 
 It should work now, but is it really a good practice? 🤔 . I mean because the sense of unit tests is unit test it means test functions independently what is wrong with this test is we are testing two functions instead of one, it should not happen never because if some the functions are failing we won't be able to isolate the problem. 
 
