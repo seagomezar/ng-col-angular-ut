@@ -1,27 +1,17 @@
-# NgColWorkshop
+# Write powerful Unit Tests with Angular Test Bed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+# 15. Practicing your power testing HTTP Request 🤓
 
-## Development server
+It is time to other excercise, this time, the idea is you to practice all the learnings from mocks, providers and HTTP, this excersice could be tricky but it would be great to you by doing it. There is an API https://jsonplaceholder.typicode.com/ to simulate a POST request. So your challenge is to create the provider, the service, the method and the test to save a "post" inside the jsonplaceholder api, you should call the endpoint POST	/posts --> https://jsonplaceholder.typicode.com/posts with the required information. it should be the first time you can control about your function and your test, so enjoy it. (Exercise 4)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+You only have 5 minutes to do this so, don't waste time ⏰
 
-## Code scaffolding
+Here the files to modify:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [placeholder.service.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step15/src/app/placeholder.service.ts)
 
-## Build
+- [placeholder.service.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step15/src/app/placeholder.service.spec.ts)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## You are done, now go to [Branch #16](https://github.com/seagomezar/ng-col-angular-ut/tree/step16)
