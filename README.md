@@ -1,27 +1,13 @@
-# NgColWorkshop
+# Write powerful Unit Tests with Angular Test Bed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+# 11.  Solution testing dependent functions 🤩
 
-## Development server
+Showing how to test dependent functions. The first temptation is trying to simply call the greetings random function and review whats happening if we invoke this function. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+It should work now, but is it really a good practice? 🤔 . I mean because the sense of unit tests is unit test it means test functions independently what is wrong with this test is we are testing two functions instead of one, it should not happen never because if some the functions are failing we won't be able to isolate the problem. 
 
-## Code scaffolding
+🤨 The right way is put the create a test for each function and for the second function simulate the real call of the random function.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[names.service.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step11/src/app/names.service.spec.ts)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## You are done, now go to [Branch #12](https://github.com/seagomezar/ng-col-angular-ut/tree/step12)
