@@ -1,27 +1,9 @@
-# NgColWorkshop
+# Write powerful Unit Tests with Angular Test Bed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+# 22. Automatic binding process in testing 🤖
 
-## Development server
+Now we understand how to handle the change detection it is complete healthy try to avoid the `fixture.detectChanges` when possible, because we really don't want to be aware all the time if we need to run the `detectChanges` statement. Angular provides us the way to handle this process very easy through `ComponentFixtureAutoDetect`, let's take a look the considerations and limitations about here: 🚯
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+[login.component.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step21/src/app/login/login.component.spec.ts)
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## You are done, now go to [Branch #23](https://github.com/seagomezar/ng-col-angular-ut/tree/step23)
