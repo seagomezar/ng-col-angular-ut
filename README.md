@@ -1,27 +1,42 @@
-# NgColWorkshop
+# Write powerful Unit Tests with Angular Test Bed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+# 30. Congratulations 🎉🎉🎉 you are a Unit Testing Pro! 
 
-## Development server
+Congratulations you have completed the workshop 👯🏿‍. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Yes!, let's celebrate it!
 
-## Code scaffolding
+Now I invite you to run the command ¨ng test --code-coverage¨ to review how much of your code is covered for the tests and start reviewing how you can improve it. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+That's all! 
 
-## Build
+Remember to follow me on twitter [@sebasgojs](https://twitter.com/sebasgojs) and more important fork and give a start to this repository (Please, I will be very grateful for this 🙏) so more people can know it and learn what you learn! 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Remember to use the conference hashtag [https://twitter.com/hashtag/NgColombia?src=hash](#ngcolombia). 
 
-## Running unit tests
+Finally, for this Particular step will keep open for PR for a few weeks and I will merge the best solution for the test. Thank you and have a nice conference!.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Contributors
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Thanks goes to these wonderful people during the creation of this workshop:
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<img src="https://avatars2.githubusercontent.com/u/2058936?s=400&u=bea0f4e7c6a1cca4e2cf8b770494149aca4c14c2&v=4" width="100px;"/><br /><sub><b>Sebastian Gomez</b></sub>  <br /> <sub>(Front-end Architech - GDG Medellín / Globant)</sub><br /> <br />
+<img src="https://avatars1.githubusercontent.com/u/4331491?s=460&v=4" width="100px;"/><br /><sub><b>Vanessa Marely</b></sub><br /><sub>(Web UI Dev - GDG Medellín / Globant)</sub><br /> <br />
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
-## Further help
+## Tutors
+Thanks goes to these wonderful people supporting during the conference:
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<img src="https://avatars1.githubusercontent.com/u/3171900?s=460&v=4" width="100px;"/><br /><sub><b>Felix Banguera</b></sub>  <br /> <sub>(Developer @Yuxi global)</sub><br /> <br />
+<img src="https://avatars1.githubusercontent.com/u/3171900?s=460&v=4" width="100px;"/><br /><sub><b>Roger Alvarez</b></sub>  <br /> <sub>(Developer @Yuxi global)</sub><br /> <br />
+<img src="https://avatars1.githubusercontent.com/u/3171900?s=460&v=4" width="100px;"/><br /><sub><b>Nelso Escobar</b></sub>  <br /> <sub>(Developer @Yuxi global)</sub><br /> <br />
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Advisors
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<img src="https://avatars1.githubusercontent.com/u/3171900?s=460&v=4" width="100px;"/><br /><sub><b>Juan Herrera</b></sub>  <br /> <sub>(Google Developer Expert in Angular)</sub><br /> <br />
+<!-- ALL-CONTRIBUTORS-LIST:END -->
