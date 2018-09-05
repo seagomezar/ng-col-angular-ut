@@ -1,6 +1,6 @@
 # Write powerful Unit Tests with Angular Test Bed
 
-# 26. Writing a validation TDD 👩🏻‍🎨
+# 24. Writing a validation TDD 👩🏻‍🎨
 
 Now, what are the fundamental concepts of a login process?, 🙃 
 
