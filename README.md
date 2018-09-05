@@ -18,7 +18,7 @@ see the test implemented is here:
 
 and you will need to write the function to pass the test here:
 
-- [login.component.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step21/src/app/login/login.component.ts)
+- [login.component.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step21/src/app/login/login.component.ts)
 
 
 It is a easy one so you only have another 2 minutes to do this, don't waste time ⏰
