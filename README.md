@@ -1,27 +1,11 @@
-# NgColWorkshop
+# Write powerful Unit Tests with Angular Test Bed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+# 21. Testing binding process in components 👥👥
 
-## Development server
+Now let's go to a very small 👌 and particular case in wich we have a component who bind two times a variable to be rendered in the template. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+We will use the setTimeout to introduce the done function in Jasmine. The important part is the fixture element which allow us to execute the databinding process where available and obviously simulate some delay ⌛... 
 
-## Code scaffolding
+Let's check this out:  [login.component.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step21/src/app/login/login.component.ts) and the [login.component.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step21/src/app/login/login.component.spec.ts)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## You are done, now go to [Branch #22](https://github.com/seagomezar/ng-col-angular-ut/tree/step22)
