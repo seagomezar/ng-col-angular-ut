@@ -1,27 +1,14 @@
-# NgColWorkshop
+# Write powerful Unit Tests with Angular Test Bed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+# 29. Final exercise 👏👏
 
-## Development server
+It has been a long journey until here, so take this exercise as your final exam 🧐 🤓. You should do two things:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. First is to write the test for the authenticationService which you will find already implemented using a hardcoded validation. 
 
-## Code scaffolding
+2. Second, you will notice about a variable in the `loginComponent` called `isLogged` this variable handle a conditional in the view to display the protected content in the view. So your goal is to write the tests for this functionality.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [login.component.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step29/src/app/login/login.component.ts) 
+- [login.component.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step29/src/app/login/login.component.spec.ts)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## You are done, now go to [Branch #30](https://github.com/seagomezar/ng-col-angular-ut/tree/step30)
