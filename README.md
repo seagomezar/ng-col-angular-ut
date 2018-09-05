@@ -13,5 +13,4 @@ Here the files to modify:
 - [placeholder.service.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step15/src/app/placeholder.service.spec.ts)
 
 
-
 ## You are done, now go to [Branch #16](https://github.com/seagomezar/ng-col-angular-ut/tree/step16)
