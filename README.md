@@ -1,27 +1,20 @@
-# NgColWorkshop
+# Write powerful Unit Tests with Angular Test Bed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+# 12. Let's rock with HTTP Request 🎸🎸🎸
 
-## Development server
+Let's go deeper into something more interesting. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Right now we are super ok, testing promises, observables and functions. In real projects it is comming most of the times from http request, because the inmediate utility of promises and observables are http streams, so let's create a method which calls and API endpoint to get some data. In this case it will be a set of events from: https://webconf-api-2018.glitch.me/. Let's create a new provider for that.
 
-## Code scaffolding
+`ng generate service conferences`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Then let's create a simple method to invoque the conferences stuff in 
+[conferences.service.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step11/src/app/conferences.service.ts)
+You will see the most easiest scenario for a http request 😍:
 
-## Build
+` getAllConferences(): Observable<any> {
+    return this.http.get(this.conferencesURL);
+  } `
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## You are done, now go to [Branch #13](https://github.com/seagomezar/ng-col-angular-ut/tree/step13)
