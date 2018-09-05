@@ -44,7 +44,7 @@ Thanks goes to these wonderful people supporting during the conference:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars1.githubusercontent.com/u/3171900?s=460&v=4" width="100px;"/><br /><sub><b>Juan Herrera</b></sub>](https://twitter.com/sebasgojs)<br /><sub>Google Developer Expert in Angular <br />@ Yuxi Global </sub> |
+| [<img src="https://avatars1.githubusercontent.com/u/3171900?s=460&v=4" width="100px;"/><br /><sub><b>Juan Herrera</b></sub>](https://twitter.com/jdjuan)<br /><sub>Google Developer Expert in Angular <br />@ Yuxi Global </sub> |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
