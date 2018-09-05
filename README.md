@@ -1,27 +1,12 @@
-# NgColWorkshop
+# Write powerful Unit Tests with Angular Test Bed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+# 26. Testing from the DOM 🌓
 
-## Development server
+In this step in our `onSubmit` method will be called with valid credentials and we are going to check if the `areValidCredentials` method is being called with proper credentials and is not being called with invalid credentials.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The proper message should be displayed. To add more power to this we are going to called from the form button just to verify the proper method is called. Let's review it:
 
-## Code scaffolding
+- [login.component.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step26/src/app/login/login.component.ts) 
+- [login.component.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step26/src/app/login/login.component.spec.ts)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## You are done, now go to [Branch #27](https://github.com/seagomezar/ng-col-angular-ut/tree/step27)
