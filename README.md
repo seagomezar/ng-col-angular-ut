@@ -1,27 +1,14 @@
-# NgColWorkshop
+# Write powerful Unit Tests with Angular Test Bed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+# 20. Introducing testing for components 🤙
 
-## Development server
+So far until here, we have covered many scenarios regarding services and providers, the muscle is ready to go next level, and it is time to start reviewing the common scenarios for the components and what we should consider and learn about it. 👣👣👣
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+☝️ Let's start with something very simple to understand what the fixture is. We have created a new component called login (with `ng generate component login`) which comes with a defined test, it is important to note in the test declarations property. Which basically allow us to add components to the test suite. A couple of considerations here are `.compileComponents();` is required for testing components because the styles and the template require compilation process and time. 
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+✌️ Then you will note the async word in the beforeEach method. It is similar to the app.component.test, basically as the compilation process is an async job we need to declare on this way the callback. 
 
-## Build
+Here we can review detailed the parallel between the [app.component.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step20/src/app/app.component.spec.ts) and the [login.component.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step20/src/app/login/login.component.spec.ts)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## You are done, now go to [Branch #21](https://github.com/seagomezar/ng-col-angular-ut/tree/step21)
