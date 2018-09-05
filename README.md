@@ -1,27 +1,26 @@
-# NgColWorkshop
+# Write powerful Unit Tests with Angular Test Bed
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
+# 24. First part of the login process 👩🏻‍🎨
 
-## Development server
+Now, what are the fundamental concepts of a login process?, 🙃 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+It should vary depend of the context, application or company however there are few common steps: 😯
 
-## Code scaffolding
+1. The first part is obviously a way for the user to enter data.
+2. Then the data needs to be valid according to some rules to validate in the client side.
+3. Later we would need to send the credential to some service and get the answer. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+So, let's focus in the first part: in a typical email/password login, we need to ensure the email is an email, and the password has atleast a simple length rule. So what if this time I give you the tests first and you will create the function to validate the user credentials are right. (Exercise 6).
 
-## Build
+see the test implemented is here:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- [login.component.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step21/src/app/login/login.component.spec.ts)
 
-## Running unit tests
+and you will need to write the function to pass the test here:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- [login.component.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step21/src/app/login/login.component.ts)
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+It is a easy one so you only have another 2 minutes to do this, don't waste time ⏰
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## You are done, now go to [Branch #25](https://github.com/seagomezar/ng-col-angular-ut/tree/step25)
