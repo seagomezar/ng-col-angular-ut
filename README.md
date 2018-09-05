@@ -8,8 +8,8 @@ Don't worry if you don't get it, trust me it is the hardes excersice of the work
 
 Here the files to modify: 👀
 
-- [conferences.service.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step18/src/app/placeholder.service.ts)
+- [conferences.service.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step18/src/app/conferences.service.ts)
 
-- [conferences.service.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step18/src/app/placeholder.service.spec.ts)
+- [conferences.service.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step18/src/app/conferences.service.spec.ts)
 
 ## You are done, now go to [Branch #19](https://github.com/seagomezar/ng-col-angular-ut/tree/step19)
