@@ -9,7 +9,7 @@ Right now we are super ok, testing promises, observables and functions. In real 
 `ng generate service conferences`
 
 Then let's create a simple method to invoque the conferences stuff in 
-[conferences.service.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step11/src/app/conferences.service.ts)
+[conferences.service.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step12/src/app/conferences.service.ts)
 You will see the most easiest scenario for a http request 😍:
 
 ` getAllConferences(): Observable<any> {
