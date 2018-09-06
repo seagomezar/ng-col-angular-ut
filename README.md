@@ -12,7 +12,7 @@ That's all!
 
 Remember to follow me on twitter [@sebasgojs](https://twitter.com/sebasgojs), tweet if you liked this workshop, and more important fork and give a start to this repository (Please, I will be very grateful for this 🙏) so more people can know it and learn what you learn!
 
-Remember to use the conference hashtag [https://twitter.com/hashtag/NgColombia?src=hash](#ngcolombia).
+Remember to use the conference hashtag [#ngcolombia](https://twitter.com/hashtag/NgColombia?src=hash]).
 
 Finally, for this Particular step will keep open for PR for a few weeks and I will merge the best solution for the test. Thank you and have a nice conference!.
 
