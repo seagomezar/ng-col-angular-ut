@@ -8,7 +8,7 @@ One of the advantages about the observables in angular is the hability to catch 
 
 We will go back to our:
 
-- [conferences.service.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step17/src/app/placeholder.service.ts)
+- [conferences.service.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step17/src/app/conferences.service.ts)
 
 - [conferences.service.spec.ts](https://github.com/seagomezar/ng-col-angular-ut/blob/step17/src/app/conferences.service.spec.ts)
 
