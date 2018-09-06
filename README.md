@@ -23,4 +23,4 @@ and you will need to write the function to pass the test here:
 
 It is a easy one so you only have another 2 minutes to do this, don't waste time ⏰
 
-## You are done, now go to [Branch #26](https://github.com/seagomezar/ng-col-angular-ut/tree/step26)
+## You are done, now go to [Branch #25](https://github.com/seagomezar/ng-col-angular-ut/tree/step25)
