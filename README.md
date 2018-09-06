@@ -10,7 +10,7 @@ Now I invite you to run the command ¨ng test --code-coverage¨ to review how mu
 
 That's all!
 
-Remember to follow me on twitter [@sebasgojs](https://twitter.com/sebasgojs), tweet if you like thos workshop, and more important fork and give a start to this repository (Please, I will be very grateful for this 🙏) so more people can know it and learn what you learn!
+Remember to follow me on twitter [@sebasgojs](https://twitter.com/sebasgojs), tweet if you liked this workshop, and more important fork and give a start to this repository (Please, I will be very grateful for this 🙏) so more people can know it and learn what you learn!
 
 Remember to use the conference hashtag [https://twitter.com/hashtag/NgColombia?src=hash](#ngcolombia).
 
