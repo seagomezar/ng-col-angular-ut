@@ -18,12 +18,12 @@ Finally, for this Particular step will keep open for PR for a few weeks and I wi
 
 ## Contributors
 
-Thanks goes to these wonderful people during the creation of this workshop:
+Thanks to Vanessa for her support during the creation of this workshop:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars2.githubusercontent.com/u/2058936?s=400&u=bea0f4e7c6a1cca4e2cf8b770494149aca4c14c2&v=4" width="100px;"/><br /><sub><b>Sebastian Gomez</b></sub>](https://twitter.com/sebasgojs)<br /><sub>Front-end Architect <br />@ Globant </sub> | [<img src="https://avatars1.githubusercontent.com/u/4331491?s=460&v=4" width="100px;"/><br /><sub><b>Vanessa Marely</b></sub>](https://twitter.com/vanessamarely )<br /><sub>Web UI Developer <br />@ Globant</sub> |
-| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| [<img src="https://avatars1.githubusercontent.com/u/4331491?s=460&v=4" width="100px;"/><br /><sub><b>Vanessa Marely</b></sub>](https://twitter.com/vanessamarely )<br /><sub>Web UI Developer <br />@ Globant</sub> |
+| :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | 
 
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
